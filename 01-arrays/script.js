@@ -30,12 +30,12 @@ console.log(firstTeacher);
 
 // 5. Aggiungi un insegnante di nome 'Vanessa' alla fine dell'array teachers
 
-const addTeacher = teachers.push('Vanessa');
+teachers.push('Vanessa');
 console.log(teachers);
 
 // 6. Aggiungi un insegnante di nome 'Sarah' all'inizio dell'array teachers
 
-const addTeacherFirst = teachers.unshift('Sarah');
+teachers.unshift('Sarah');
 console.log(teachers);
 
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
@@ -45,9 +45,13 @@ console.log(lewisIndex);
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = teachers.length;
 
-if (isTeachersEmpty === 0){
-  console.log("L'array è vuoto");
-}
-console.log(`L'array contiene ${isTeachersEmpty} elementi.`);
+// const isTeachersEmpty = teachers.length; ----> quando una variabile magari inizia in quel modo, è come se ponesse una domanda e prevede l'uso di un valore booleano: true o false.
+
+// if (isTeachersEmpty === 0){
+//   console.log("L'array è vuoto");
+// }
+// console.log(`L'array contiene ${isTeachersEmpty} elementi.`);
+
+const isTeachersEmpty = teachers.length === 0; /*----> soluzione corretta*/
+console.log(isTeachersEmpty);
